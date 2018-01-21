@@ -26,7 +26,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 ## <a name="struct-instances-vs-class-instances"></a>Strukturinstanzen im Vergleich zu Klasseninstanzen  
  Da Klassen Verweistypen sind, enthält eine Variable eines Klassenobjekts einen Verweis auf die Adresse des Objekts auf dem verwalteten Heap. Wenn dem ersten Objekt ein zweites Objekt desselben Typs zugewiesen wird, verweisen beide Variablen auf das Objekt in dieser Adresse. Dieser Punkt wird in diesem Thema an späterer Stelle ausführlicher behandelt.  
   
- Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/keywords/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person 2` sind Instanzen oder Objekte des Typs.  
+ Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/keywords/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person2` sind Instanzen oder Objekte des Typs.  
   
  [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   

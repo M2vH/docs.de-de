@@ -43,15 +43,15 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 -   virtuelle Member in der Basisklasse überschrieben werden sollen  
   
--   die nächste Basisklassenmethoden vererbt ohne Überschreiben vererbt werden soll,  
+-   die nächste Basisklassenmethoden ohne Überschreiben vererbt werden soll,  
   
--   neue nicht virtuelle Member der Member definiert werden sollen, die die Basisklassenimplementierungen verbergen.  
+-   neue nicht virtuelle Implementierungen der Member definiert werden sollen, die die Basisklassenimplementierungen verbergen.  
   
  Eine abgeleitete Klasse kann einen Basisklassenmember nur überschreiben, wenn der Basisklassenmember als [virtuell](../../../csharp/language-reference/keywords/virtual.md) oder [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert ist. Der abgeleitete Member muss das [override](../../../csharp/language-reference/keywords/override.md)-Schlüsselwort verwenden, um explizit anzugeben, dass die Methode an dem virtuellen Aufruf beteiligt sein soll. Der folgende Code veranschaulicht dies:  
   
  [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
- Felder können nicht virtuelle sein; nur Methoden, Eigenschaften, Ereignisse und Indexer können virtuell sein. Wenn eine abgeleitete Klasse einen virtuellen Member überschreibt, wird dieser Member auch dann aufgerufen, wenn auf eine Instanz dieser Klasse als Instanz der Basisklasse zugegriffen wird. Der folgende Code veranschaulicht dies:  
+ Felder können nicht virtuell sein; nur Methoden, Eigenschaften, Ereignisse und Indexer können virtuell sein. Wenn eine abgeleitete Klasse einen virtuellen Member überschreibt, wird dieser Member auch dann aufgerufen, wenn auf eine Instanz dieser Klasse als Instanz der Basisklasse zugegriffen wird. Der folgende Code veranschaulicht dies:  
   
  [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   

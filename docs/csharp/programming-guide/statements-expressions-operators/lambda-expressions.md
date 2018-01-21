@@ -178,7 +178,7 @@ int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 int oddNumbers = numbers.Count(n => n % 2 == 1);  
 ```  
   
- Der Compiler kann den Typ des Eingabeparameters ableiten, Sie können ihn aber auch explizit angeben. Dieser bestimmte Lambda-Ausdruck zählt die ganzen Zahlen (`n`), bei denen nach dem Dividieren durch zwei als Rest 1 bleibt.  
+ Der Compiler kann den Typ des Eingabeparameters ableiten, Sie können ihn aber auch explizit angeben. Dieser bestimmte Lambda-Ausdruck zählt die ganzen Zahlen `n`, bei denen nach dem Dividieren durch 2 als Rest 1 bleibt.  
   
  Mit der folgenden Codezeile wird eine Sequenz erzeugt, die alle Elemente im `numbers` -Array enthält, die vor der 9 auftreten, da dies die erste Zahl in der Sequenz ist, die die Bedingung nicht erfüllt:  
   
@@ -186,14 +186,14 @@ int oddNumbers = numbers.Count(n => n % 2 == 1);
 var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
 ```  
   
- In diesem Beispiel wird gezeigt, wie Sie mehrere Eingabeparameter angeben, indem Sie sie in Klammern einschließen. Mit der Methode werden alle Elemente im Zahlenarray zurückgegeben, bis eine Zahl erreicht wird, deren Wert kleiner ist als seine Position. Verwechseln Sie den Lambda-Operator (`=>`) nicht mit dem Operator "Größer als oder gleich" (`>=`).  
+ In diesem Beispiel wird gezeigt, wie Sie mehrere Eingabeparameter angeben, indem Sie sie in Klammern einschließen. Mit der Methode werden alle Elemente im Zahlenarray zurückgegeben, bis eine Zahl erreicht wird, deren Wert kleiner ist als seine Position. Verwechseln Sie den Lambda-Operator `=>` nicht mit dem Operator "Größer als oder gleich" `>=`.  
   
 ```csharp  
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
 ## <a name="type-inference-in-lambdas"></a>Typrückschluss in Lambdas  
- Beim Schreiben von Lambdas müssen Sie oftmals keinen Typ für die Eingabeparameter angeben, da der Compiler den Typ auf der Grundlage des Lambda-Texts, des zugrunde liegenden Delegattyps des Parameters und anderer Faktoren per Rückschluss ableiten kann, wie in der C#-Programmiersprachenspezifikation beschrieben. Bei den meisten Standardabfrageoperatoren entspricht die erste Eingabe dem Typ der Elemente in der Quellsequenz. Beim Abfragen von `IEnumerable<Customer>`wird die Eingabevariable als `Customer` -Objekt abgeleitet, sodass Sie auf die zugehörigen Methoden und Eigenschaften zugreifen können:  
+ Beim Schreiben von Lambdas müssen Sie oftmals keinen Typ für die Eingabeparameter angeben, da der Compiler den Typ auf der Grundlage des Lambda-Texts, des zugrunde liegenden Delegattyps des Parameters und anderer Faktoren per Rückschluss ableiten kann, wie in der C#-Programmiersprachenspezifikation beschrieben. Bei den meisten Standardabfrageoperatoren entspricht die erste Eingabe dem Typ der Elemente in der Quellsequenz. Beim Abfragen von `IEnumerable<Customer>` wird die Eingabevariable als `Customer`-Objekt abgeleitet, sodass Sie auf die zugehörigen Methoden und Eigenschaften zugreifen können:  
   
 ```csharp  
 customers.Where(c => c.City == "London");  
@@ -266,7 +266,7 @@ class Test
   
 -   Ein Lambda-Ausdruck kann einen `ref` - oder `out` -Parameter nicht direkt von einer einschließenden Methode erfassen.  
   
--   Eine return-Anweisung in einem Lambda-Ausdruck bewirkt keine Rückgabe durch die einschließende Methode.  
+-   Eine `return`-Anweisung in einem Lambda-Ausdruck bewirkt keine Rückgabe durch die einschließende Methode.  
   
 -   Ein Lambda-Ausdruck kann eine `goto` -Anweisung, `break` -Anweisung oder `continue` -Anweisung enthalten, die innerhalb der Lambda-Funktion liegt, wenn das Ziel der jump-Anweisung außerhalb des Blocks liegt. Eine jump-Anweisung darf auch nicht außerhalb des Lambda-Funktionsblocks sein, wenn das Ziel im Block ist.  
   

@@ -31,7 +31,7 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
   
 1.  Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt** aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
