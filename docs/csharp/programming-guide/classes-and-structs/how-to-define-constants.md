@@ -25,7 +25,7 @@ Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nie 
   
  Verwenden Sie zum Definieren von konstanten Werten integraler Typen (`int`, `byte` usw.) einen enumerierten Typ. Weitere Informationen finden Sie unter [enum](../../../csharp/language-reference/keywords/enum.md).  
   
- Zum Definieren nicht-integraler Konstanten ist eine Methode, diese in einer einzelnen statischen Klasse namens `Constants` zu gruppieren. Dies erfordert, dass allen Verweise auf die Konstanten, so wie im folgenden Beispiel gezeigt, der Klassenname vorangestellt wird.  
+ Zum Definieren nicht-integraler Konstanten ist ein Ansatz, diese in einer einzelnen statischen Klasse namens `Constants` zu gruppieren. Dies erfordert, dass allen Verweisen auf die Konstanten, so wie im folgenden Beispiel gezeigt, der Klassenname `Constants` vorangestellt wird.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
